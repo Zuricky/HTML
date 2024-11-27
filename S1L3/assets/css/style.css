@@ -1,0 +1,33 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+header nav {
+    color: #014e4d; 
+    background-color: #fdfbf1;
+    border-top: 1px solid #ffd877;
+}
+main img {
+    border-radius: 3%;
+    box-shadow: 1px 1px 10px black;
+}
+article {
+    width: 75%;
+    margin: 0 auto;
+    text-align: left;
+}
+main, footer {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+header, h1 {
+    text-align: center;
+}
+.bordertop {
+    border-top:1 px solid #579d9d; 
+}
+figure {
+    text-align: center;
+    color: grey;
