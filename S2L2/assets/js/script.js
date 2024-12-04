@@ -1,7 +1,6 @@
 /* ESERCIZIO 1
  Scrivi un algoritmo per trovare il più grande tra due numeri interi.
 */
-
 /*
 let num1 = 5
 let num2 = 10
@@ -19,7 +18,6 @@ else {
 /* ESERCIZIO 2
   Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornito è diverso da 5.
 */
-
 /*
 let number = 7
 if (number !== 5) {
