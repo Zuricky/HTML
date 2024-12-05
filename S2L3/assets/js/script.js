@@ -104,7 +104,7 @@ const starWarsCharacters = [
 /* ESERCIZIO 1
   Crea una variabile chiamata "charactersNames" e assegnale un array vuoto
 */
-let charactersNames = [];
+const charactersNames = [];
 
 /* ESERCIZIO 2
   Utilizzando un ciclo for, cicla l'array "starWarsCharacters".
@@ -161,7 +161,6 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
       eye_color["blue-gray"].push(starWarsCharacters[i]);
       break;
     default:
-      console.log('Eye color ${starWarsCharacters[i].eye_color} not categorized.')
   }
 }
 console.log("Eye Color Categories", eye_color);
@@ -170,10 +169,10 @@ console.log("Eye Color Categories", eye_color);
   Usa un while loop per calcolare la massa totale dell'equipaggio. Salvala in una variabile chiamata "crewMass".
 */
 let crewMass = 0;
-let index = 0;
+let i = 0;
 while (index < starWarsCharacters.length) {
-  crewMass += starWarsCharacters[index].mass;
-  index++;
+  crewMass += starWarsCharacters[i].mass;
+  i++;
 }
 console.log("Total Crew Mass:", crewMass);
 
@@ -203,6 +202,7 @@ else if (crewMass > 900 && crewMass < 1000) {
 else if (crewMass > 1000) {
   console.log("DANGER! OVERLOAD ALERT: escape from ship now!");
 }
+else {console.log("Error!!!")}
 
 /* ESERCIZIO 8
   Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi effettuare la riassegnazione del valore corrispondente o creare un nuovo array)
