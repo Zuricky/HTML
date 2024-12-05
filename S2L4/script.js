@@ -4,31 +4,36 @@
 area = (l1, l2) => {
     return l1 * l2
 }
-console.log(area)
+const resultarea = area(10, 5)
+console.log("L'area del rettangolo è:" + resultarea)
 
 /* ESERCIZIO 2
  Scrivi una funzione di nome "crazySum", che riceve due numeri interi come parametri.
  La funzione deve ritornare la somma dei due parametri, ma se il valore dei due parametri è il medesimo deve invece tornare
  la loro somma moltiplicata per tre.
 */
-crazySum = (a, b) => {
-    if (a === b) {
-        return (a + b) * 3;
+crazySum = (num1, num2) => {
+    if (num1 === num2) {
+        return (num1 + num2) * 3;
     }
-    return a + b;
+    return num1 + num2;
 }
+const resultCrazySum = crazySum(10, 10)
+console.log("La somma della funzione è:" + resultCrazySum)
 
 /* ESERCIZIO 3
  Scrivi una funzione di nome "crazyDiff" che calcola la differenza assoluta tra un numero fornito come parametro e 19.
  Deve inoltre tornare la differenza assoluta moltiplicata per tre qualora il numero fornito sia maggiore di 19.
 */
 crazyDiff = (n) => {
-    const diff = Math.abs(a - 19);
-    if (a > 19) {
+    const diff = Math.abs(n - 19);
+    if (n > 19) {
         return diff * 3;
     }
     return diff;
 }
+const resultCrazyDiff = crazyDiff(10)
+console.log("La somma della differenza è:" + resultCrazyDiff)
 
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
@@ -37,6 +42,8 @@ crazyDiff = (n) => {
 boundary = (n) => {
     return (20 >= n <= 100) || n === 400;
 }
+let n = 15
+console.log("Il risultato della funzione è: " + boundary(n))
 
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
@@ -49,6 +56,8 @@ epify = (str) => {
     }
     return "EPICODE" + str;
 }
+const resultEpify = epify("EPICODE")
+console.log("Il risultato della funzione è: " + resultEpify)
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
@@ -57,6 +66,8 @@ epify = (str) => {
 check3and7 = (n) => {
     return n % 3 === 0 || n % 2 === 0;
 }
+const resultCheck = check3and7(5)
+console.log("Il risultato della funzione è: " + resultCheck)
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
@@ -70,8 +81,10 @@ reverseString = (str) => {
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
 upperFirst = (strstr) => {
-    return strstr
-        .split("").map().join();
+    return sentence
+        .split(" ")
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ");
 }
 
 /* ESERCIZIO 9
@@ -87,4 +100,8 @@ cutString = (str) => {
 */
 giveMeRandom = (n) => {
     const randomN = [];
+    for (let i = 0; i < n; i++) {
+        randomN.push(Math.floor(Math.random() * 11));
+    }
+    return randomN;
 }
