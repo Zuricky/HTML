@@ -252,9 +252,10 @@ footer a {
   }
   header div img {
     margin: 5px;
+    float: left;
   }
   header p {
-    float:right;
+    float: right;
     padding-top: 25px;
     font-size: large;
   }
